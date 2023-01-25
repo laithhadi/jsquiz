@@ -1,0 +1,20 @@
+{
+  "name": "Javascript Quiz",
+  "version": "1.0.0",
+  "description": "Quiz site",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laithhadi/jsquiz.git"
+  },
+  "author": "Laith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laithhadi/jsquiz/issues"
+  },
+  "homepage": "https://github.com/laithhadi/jsquiz#readme"
+}
