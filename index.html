@@ -2,61 +2,58 @@
 <html>
 
 <head>
-    <title>Personality Quiz</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Cat Quiz</title>
 </head>
 
 <body>
-    <div id="intro">
-        <h1>Personality Quiz</h1>
-        <p>Answer the following questions to find out your personality type.</p>
-    </div>
-    <form id="quiz-form">
-        <div class="question" id="question-1">
-            <h2>Question 1</h2>
-            <p>What is your favorite color?</p>
-            <input type="radio" name="question-1" value="red">Red
-            <input type="radio" name="question-1" value="blue">Blue
-            <input type="radio" name="question-1" value="green">Green
-            <input type="radio" name="question-1" value="yellow">Yellow
+    <div class="container">
+        <h1 class="text-center">
+            Welcome to the Cat Quiz
+        </h1>
+        <p class="text-center">
+            Test your knowledge about cats by answering the following questions.
+        </p>
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+                <button id="start-quiz" class="btn btn-primary text-center" onclick="startQuiz()">
+                    Start Quiz
+                </button>
+            </div>
         </div>
-        <div class="question" id="question-2">
-            <h2>Question 2</h2>
-            <p>What is your favorite animal?</p>
-            <input type="radio" name="question-2" value="dog">Dog
-            <input type="radio" name="question-2" value="cat">Cat
-            <input type="radio" name="question-2" value="bird">Bird
-            <input type="radio" name="question-2" value="fish">Fish
+        <form id="question-form" class="question-container">
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1">
+                    <h2 id="question"></h2>
+                    <div class="form-group">
+                        <div class="choice-container"></div>
+                    </div>
+                    <button id="next-question" class="btn btn-primary" onclick="nextQuestion(event)">
+                        Next
+                    </button>
+                    <button id="previous-question" class="btn btn-primary" onclick="previousQuestion(event)">
+                        Previous
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div id="result-container">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <h2 id="result"></h2>
+                </div>
+            </div>
         </div>
-        <div class="question" id="question-3">
-            <h2>Question 3</h2>
-            <p>What is your favorite hobby?</p>
-            <input type="radio" name="question-3" value="reading">Reading
-            <input type="radio" name="question-3" value="writing">Writing
-            <input type="radio" name="question-3" value="sports">Sports
-            <input type="radio" name="question-3" value="music">Music
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+                <button id="restart-quiz" class="btn btn-primary text-center" onclick="restartQuiz()">
+                    Restart Quiz
+                </button>
+            </div>
         </div>
-        <div class="question" id="question-4">
-            <h2>Question 4</h2>
-            <p>What is your favorite type of food?</p>
-            <input type="radio" name="question-4" value="italian">Italian
-            <input type="radio" name="question-4" value="mexican">Mexican
-            <input type="radio" name="question-4" value="chinese">Chinese
-            <input type="radio" name="question-4" value="american">American
-        </div>
-        <div class="question" id="question-5">
-            <h2>Question 5</h2>
-            <p>What is your favorite season?</p>
-            <input type="radio" name="question-5" value="spring">Spring
-            <input type="radio" name="question-5" value="summer">Summer
-            <input type="radio" name="question-5" value="fall">Fall
-            <input type="radio" name="question-5" value="winter">Winter
-        </div>
-        <button type="submit" <button type="submit" id="submit-button">Submit</button>
-    </form>
-    <div id="result" style="display: none;">
-        <h1>Your Personality Type is: <span id="personality-type"></span></h1>
-        <p>Description of personality type goes here.</p>
     </div>
     <script src="script.js"></script>
 </body>
