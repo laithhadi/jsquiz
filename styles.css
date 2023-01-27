@@ -2,7 +2,11 @@ body {
   background-color: #f5f5f5;
 }
 
-#result-container, #restart-quiz, .question-container, #question-form {
+.progress,
+.question-container,
+#result-container,
+#restart-quiz,
+#question-form {
   display: none;
 }
 
@@ -11,10 +15,15 @@ body {
   margin: 0 auto;
 }
 
+#question,
+#result,
+.choice-container {
+  text-align: center;
+}
+
 #result {
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
 }
 
 #question-form {
@@ -22,4 +31,30 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#next-question {
+  float: left;
+}
+
+#previous-question {
+  float: right;
+}
+
+.progress {
+    padding-bottom: 1px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: blue;
+}
+
+#error-toast {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  display: none;
 }
