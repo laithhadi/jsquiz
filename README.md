@@ -1,1 +1,2 @@
-# jsquiz
+# Javascript Quiz about cats!
+
